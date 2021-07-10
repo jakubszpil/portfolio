@@ -1,7 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
+import { navbarReducer } from '../features/navbar';
 
 export const defaultStore = {
-  reducer: {},
+  reducer: {
+    navbar: navbarReducer,
+  },
 };
 
 export const store = configureStore(defaultStore);
