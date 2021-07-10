@@ -1,10 +1,12 @@
+import { Layout } from '../components/Layout';
+
 const Home = () => {
   return (
-    <div>
+    <Layout home>
       <div>
         <h1>Siema</h1>
       </div>
-    </div>
+    </Layout>
   );
 };
 

@@ -36,15 +36,7 @@ function Scrollbar({ children }) {
     };
   }, []);
 
-  return (
-    <div
-      aria-label="scrollbar"
-      data-attached={attached}
-      data-scrolled={scrolled}
-    >
-      <>{children}</>
-    </div>
-  );
+  return <>{children}</>;
 }
 
 export default Scrollbar;
