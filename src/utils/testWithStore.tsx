@@ -1,17 +1,10 @@
-// test-utils.jsx
-import React from 'react';
 import { render as rtlRender } from '@testing-library/react';
-import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
-import { defaultStore } from '../app/store';
+import { store as appStore } from '../app/store';
 
 function render(
   ui,
-  {
-    preloadedState,
-    store = configureStore({ ...defaultStore, preloadedState }),
-    ...renderOptions
-  }: any = {}
+  { preloadedState, store = appStore, ...renderOptions }: any = {}
 ) {
   function Wrapper({ children }) {
     return <Provider store={store}>{children}</Provider>;
